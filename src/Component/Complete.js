@@ -1,10 +1,11 @@
 import React from 'react'
 
 export default function Complete({incomplete,complete,setComplete,setIncomplete}) {
-    function ChangetoIncomplete({identity}){
+    function ChangetoIncomplete(identity){
         complete=complete.filter(blog=> blog.id!== identity);
         setComplete(complete);
-        setIncomplete(()=>[...incomplete,{id:identity,content:`Blog ${identity}`}]); 
+        setIncomplete(()=>[...incomplete,{id:`${identity}`,content:`Blog ${identity}`}]); 
+        console.log(incomplete);
             }
     
   return (
