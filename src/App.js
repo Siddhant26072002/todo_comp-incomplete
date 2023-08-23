@@ -13,8 +13,8 @@ function App() {
   ]);
 
   const [incomplete,setIncomplete]=useState([
-    {id:1,content:"Blog 3"},
-    {id:2,content:"Blog 4"}
+    {id:3,content:"Blog 3"},
+    {id:4,content:"Blog 4"}
   ]);
 
   const [num,setNum]=useState(5);

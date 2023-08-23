@@ -3,7 +3,7 @@ import React from 'react';
 
 export default function Addblog({num,setComplete,complete,setNum}) {
     function Click(e){
-     setComplete(()=>[...complete,{id:num, content:`Blog ${num}`}]);
+     setComplete([...complete,{id:num, content:`Blog ${num}`}]);
      setNum(num => num+1);
     }
 
