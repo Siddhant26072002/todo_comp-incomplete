@@ -4,13 +4,13 @@ import {Link,useLocation} from "react-router-dom";
 export default function Navbar() {
     const location=useLocation();
   return (
-    <div>
+    <div className='nav'>
         <Link to='/complete'
-        className={`${location.pathname === "/complete" ? "active" : ""}`}
+        className={`nav-links ${location.pathname === "/complete" ? "active" : ""}`}
         > Complete</Link>
 
         <Link to='/incomplete'
-        className={`${location.pathname === "/incomplete" ? "active" : ""}`}
+        className={`nav-links ${location.pathname === "/incomplete" ? "active" : ""}`}
         > Incomplete</Link>
     </div>
   )

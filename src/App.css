@@ -1,38 +1,140 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container{
+  padding: 50px;
+  font-size: 20px;
+  background-color: rgb(248, 249, 250);
+  height: 92vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+html,
+body {
+  font-family: "Roboto", sans-serif;
+  scroll-behavior: smooth;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.nav{
   display: flex;
-  flex-direction: column;
+  justify-content:flex-start;
+  gap: 50px;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  border-bottom: 1px solid black;
+  font-size: 25px;
+}
+
+.nav-links{
+  text-decoration: none;
+  color: grey;
+  margin-left: 50px;
+  padding: 10px;
+}
+
+.active{
+  color: black;
+}
+
+.blog{
+    border: 2px solid grey;
+    width: fit-content;
+    padding: 15px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap:15px;
+}
+
+.blog:has(.add:hover){
+  border-color: blue;
+  transition: scale(1.1);
+}
+
+.add{
+  padding: 5px;
+  font-size: 17px;
+}
+
+.add:hover{
+  transform: scale(1.1);
+  cursor: pointer;
+  background-color: blue;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.group{
+  margin-top: 50px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 50px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card{
+  display: flex;
+  flex-direction: column;
+  gap:15px;
+  border: 2.5px solid grey;
+  border-radius: 10px;
+  padding: 14px;
+  border-color: green;
+}
+
+.completebutton{
+  background-color: green;
+  color: white;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.card .highlighted{
+  border-color: red;
+}
+
+.completebutton:hover{
+  background-color: red;
+  cursor: pointer;
+  transform: scale(1.05);
+  border-color: red;
+  font-size: 14px;
+}
+
+.card:has(.completebutton:hover) {
+  border-color: red;
+}
+
+
+
+
+
+.card2 {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  border: 2.5px solid grey;
+  border-radius: 10px;
+  padding: 14px;
+  border-color: red;
+}
+
+.incompletebutton {
+  background-color: red;
+  color: white;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.incompletebutton:hover {
+  background-color: green;
+  cursor: pointer;
+  transform: scale(1.05);
+  border-color: green;
+  font-size: 14px;
+}
+
+.card2:has(.incompletebutton:hover) {
+  border-color: green;
 }

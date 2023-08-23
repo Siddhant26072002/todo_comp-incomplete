@@ -23,8 +23,9 @@ function App() {
     
     <Router>
       <Navbar />
-      <Create num={num} setComplete={setComplete}
-      complete={complete}
+      <div className='container'>
+      <Create num={num} setIncomplete={setIncomplete}
+      incomplete={incomplete}
       setNum={setNum}
       />
       <Routes>
@@ -44,6 +45,7 @@ function App() {
         setIncomplete={setIncomplete} />}
       />
       </Routes>
+      </div>
 </Router>
  
   );

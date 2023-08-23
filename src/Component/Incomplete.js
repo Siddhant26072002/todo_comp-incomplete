@@ -9,14 +9,14 @@ export default function Incomplete({incomplete,complete,setComplete,setIncomplet
             }
     
   return (
-    <>
+    <div className='group'>
     {incomplete.map((blog) =>(
-        <div className='card'
+        <div className='card2'
                 key={blog.id}>
             <div>{blog.content}</div>
-            <button onClick={() =>ChangetoComplete(blog.id)}>mark complete</button>
+            <button className='incompletebutton' onClick={() =>ChangetoComplete(blog.id)}>mark complete</button>
         </div>
   ))}
-  </>
+  </div>
   )
 }
